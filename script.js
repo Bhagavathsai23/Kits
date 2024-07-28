@@ -1,31 +1,27 @@
+// Example of a simple JavaScript function to enhance the UI
+
+// Wait for the document to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
-    const content = document.querySelector('.content');
-    content.style.opacity = 0;
-    setTimeout(() => {
-        content.style.transition = "opacity 1s";
-        content.style.opacity = 1;
-    }, 100);
+    // Example of a function that could be used to enhance UI interactions
+    function highlightCurrentPage() {
+        // Get the current page URL
+        var currentPage = window.location.pathname.split('/').pop();
+
+        // Get all the navigation links
+        var navLinks = document.querySelectorAll('.nav-section a');
+
+        // Loop through each link and check if it matches the current page
+        navLinks.forEach(function(link) {
+            var linkPage = link.getAttribute('href').split('/').pop();
+            if (linkPage === currentPage) {
+                link.style.fontWeight = 'bold';
+                link.style.color = '#ffc107';
+            }
+        });
+    }
+
+    // Call the function to highlight the current page
+    highlightCurrentPage();
 });
 
-function toggleContent(id) {
-    const content = document.getElementById(id);
-    if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-    } else {
-        content.classList.add('hidden');
-    }
-}
-
-function toggleSearch() {
-    const searchSection = document.getElementById('searchSection');
-    if (searchSection.classList.contains('hidden')) {
-        searchSection.classList.remove('hidden');
-    } else {
-        searchSection.classList.add('hidden');
-    }
-}
-
-function performSearch() {
-    const searchInput = document.getElementById('searchInput').value;
-    alert('Search functionality is not implemented. You searched for: ' + searchInput);
 }
