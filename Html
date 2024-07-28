@@ -1,0 +1,88 @@
+#Html <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Interview Tips and Techniques</title>
+<meta http-equiv="Content-Language" content="EN-GB">
+<meta name="language" content="EN-GB">
+<meta name="copyright" content="www.annekiran.co.uk">
+<meta name="rating" content="General">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="7 days">
+<meta name="reply-to" content="info@annekiran.co.uk">
+<meta name="document-rating" content="Safe for Kids">
+<meta name="description" content=" ">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.php"><img src="Logo.gif" alt="Logo"></a>
+        </div>
+        <div class="advertisement">
+            <!-- Advertisement space -->
+        </div>
+        <div class="offers">
+            <button onclick="toggleSearch()">Toggle Search</button>
+            <div id="searchSection" class="hidden">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation Panel -->
+    <nav class="nav-panel">
+        <a href="index.php">Home Page</a>
+        <a href="attractive.php">Attractive Features</a>
+        <a href="interview.php">Interview FAQ</a>
+        <a href="typical.php">Typical Interviews</a>
+        <a href="management.php">Management Interviews</a>
+        <a href="industry.php">Industry Trend Questions</a>
+        <a href="dosanddonts.php">Do's and Don'ts</a>
+        <a href="top10.php">Top Ten Tips</a>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="content">
+        <h1>Welcome to annekiran.co.uk</h1>
+        <section class="tips">
+            <h2>Interview Hints and Tips</h2>
+            <p>The purpose of an interview is for the employer to meet you in person and evaluate whether your personality will fit into their organization and assess your skills mentioned on your CV...</p>
+            <button onclick="toggleContent('tipsContent')">Read More</button>
+            <div id="tipsContent" class="hidden">
+                <p>Reaching an interview stage establishes that you have the fundamental qualifications for the job. You have to build upon this and impress the interviewers with your personality...</p>
+            </div>
+        </section>
+        <section class="impressions">
+            <h2>First Impressions</h2>
+            <p>Research by psychologists has shown that people decide what they think of you within four minutes of a first meeting...</p>
+            <button onclick="toggleContent('impressionsContent')">Read More</button>
+            <div id="impressionsContent" class="hidden">
+                <p>Get all of your preparation out of the way well in advance, and allow plenty of time to get to the interview so you arrive in a cool, calm state...</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="/index.php">Home</a>
+            <a href="/about.php">About Us</a>
+            <a href="/terms.php">Terms</a>
+            <a href="/privacy.php">Privacy</a>
+            <a href="/giftsforher.php">Gifts for Her</a>
+            <a href="/giftsforhim.php">Gifts for Him</a>
+            <a href="/giftsforkids.php">Gifts for Kids</a>
+        </nav>
+    </footer>
+</div>
+
+</body>
+</html>
