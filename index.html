@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -130,6 +130,173 @@
             <aside class="col-md-3">
                 <div class="sidebar">
                     <p><strong>Popular Products</strong></p>
+                    <p><a href="popularproducts.php">Click Here</a> for more popular products</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><a href="index.php" class="text-white">Home</a> | <a href="about.php" class="text-white">About Us</a> | <a href="terms.php" class="text-white">Terms</a> | <a href="privacy.php" class="text-white">Privacy</a> | <a href="gifts.php" class="text-white">Gifts</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Tips and Techniques</title>
+    <meta name="description" content="Interview tips and techniques.">
+    <meta name="keywords" content="interview tips, job interview, interview techniques">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-image: linear-gradient(to right, #f8f9fa, #e9ecef);
+        }
+        .header, .footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+        }
+        .header img {
+            max-width: 100px;
+        }
+        .nav-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .nav-section li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .nav-section a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .nav-section a:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .sidebar {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h3 {
+            color: #007bff;
+        }
+        .sidebar a {
+            color: #333;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            color: #007bff;
+        }
+        .footer p {
+            margin: 0;
+            text-align: center;
+        }
+        hr {
+            border-top: 1px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header d-flex justify-content-between align-items-center">
+        <a href="index.php"><img src="Logo.gif" alt="Logo"></a>
+        <div>
+            <p>Your Advertisement Here</p>
+        </div>
+        <div>
+            <form action="search.php" class="form-inline">
+                <input type="text" class="form-control me-2" placeholder="Search" name="ps">
+                <button type="submit" class="btn btn-outline-light">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Navigation Panel -->
+    <nav class="nav-section bg-primary py-2">
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="index.php">Home</a></li>
+                <li class="list-inline-item"><a href="interview.php">Interview FAQ</a></li>
+                <li class="list-inline-item"><a href="gifts.php">Gifts</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Body -->
+    <main class="container my-4">
+        <div class="row">
+            <!-- Left Panel -->
+            <aside class="col-md-3">
+                <div class="sidebar">
+                    <h3>Categories</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.php">Home Page</a></li>
+                        <li><a href="attractive.php">Attractive Features</a></li>
+                        <li><a href="interview.php">Interview FAQ</a></li>
+                        <li><a href="typical.php">Typical Interviews</a></li>
+                        <li><a href="management.php">Management Interviews</a></li>
+                        <li><a href="industry.php">Industry Trend Questions</a></li>
+                        <li><a href="dosanddonts.php">Do's and Dont's</a></li>
+                        <li><a href="top10.php">Top Ten Tips</a></li>
+                    </ul>
+                    <h3>Promotional Products</h3>
+                    <p><a href="promotions.php">Click Here</a> for more promotions</p>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="col-md-6">
+                <section class="content">
+                    <h1>Welcome to annekiran.co.uk</h1>
+                    <blockquote class="blockquote">
+                        <p class="mb-0"><strong>INTERVIEW HINTS AND TIPS</strong></p>
+                        <p class="mb-0">The purpose of an interview is for the employer to meet you in person and evaluate whether your personality will fit into their organisation and also assess your skills mentioned on your CV.</p>
+                        <p class="mb-0">Reaching an interview stage establishes that you have the fundamental qualifications for the job. You have to build upon this and impress the interviewers with your personality.</p>
+                        <p class="mb-0">You will also have lost much of the competition, as only approximately 15% of applicants reach the interview stage.</p>
+                        <footer class="blockquote-footer">FIRST IMPRESSIONS</footer>
+                        <p class="mb-0">Research by psychologists has shown that people decide what they think of you within four minutes of a first meeting, therefore it is very important to make a good impression right from the start.</p>
+                        <p class="mb-0">Get all of your preparation out of the way well in advance, and allow plenty of time to get to the interview so you arrive in a cool calm state. Arrive ten minutes early and use the bathroom facilities to smarten your appearance. You will not be so nervous if you are well prepared and look your best.</p>
+                        <p class="mb-0">Confidence is the magic word. If you are confident, you will be relaxed and able to talk lucidly about yourself. You will be able to look the interviewer in the eyes, you will not fidget - you will have the potential to clinch the job.</p>
+                        <p class="mb-0">If you are not feeling very self-assured, just think: you wouldn't have reached the interview stage if you didn't possess the attributes that the company desires. Looking your best and being well prepared should help, so that when you meet the interviewer, you will be able to greet them openly with a smile, look them in the eyes, and shake their hands.</p>
+                    </blockquote>
+                </section>
+            </div>
+
+            <!-- Right Panel -->
+            <aside class="col-md-3">
+                <div class="sidebar">
+                    <h3>Popular Products</h3>
                     <p><a href="popularproducts.php">Click Here</a> for more popular products</p>
                 </div>
             </aside>
