@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - AI InterViewHelp</title>
+  <!-- Include Google Fonts as in the provided style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+  <style>
+    /* CSS based on the provided style */
+    body {
+      font-family: "Merriweather", serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 80%;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #f7f7f7;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0.2, 0.3);
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid rgb(175, 175, 175);
+      border-radius: 3px;
+      background-color: white;
+      margin-top: 8px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #9b1fd4;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.4s ease;
+      font-family: "Merriweather", serif;
+    }
+    input[type="submit"]:hover {
+      background-color: #541e78;
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+      const confirmPasswordError = document.getElementById("confirmPasswordError");
+      
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      // Clear previous error messages
+      nameError.textContent = "";
+      emailError.textContent = "";
+      passwordError.textContent = "";
+      confirmPasswordError.textContent = "";
+      
+      let isValid = true;
+      
+      // Validate name
+      if (name.trim() === "") {
+        nameError.textContent = "Name is required.";
+        isValid = false;
+      }
+      
+      // Validate email
+      if (!emailPattern.test(email)) {
+        emailError.textContent = "Please enter a valid email address.";
+        isValid = false;
+      }
+      
+      // Validate password length
+      if (password.length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters long.";
+        isValid = false;
+      }
+      
+      // Validate password confirmation
+      if (password !== confirmPassword) {
+        confirmPasswordError.textContent = "Passwords do not match.";
+        isValid = false;
+      }
+      
+      return isValid; // Prevent form submission if validation fails
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <form onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        <div id="nameError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <div id="passwordError" class="error"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div id="confirmPasswordError" class="error"></div>
+      </div>
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+</body>
+</html>
